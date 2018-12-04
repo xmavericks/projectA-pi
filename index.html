@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style>
+	body {
+    background-color: lightblue;
+}
+	input {
+    font-family: verdana;
+    font-size: 20px;
+	color : ;
+}
+</style>
+<body>
+ 
+<form>
+    Principal Amount: <input type="text" name="num1" align="center" placeholder="Enter amount" required><br>
+    Interest Rates: <input type="text" name="num2" align="center" placeholder="Enter Interest Rate" required><br>
+	No Of Years: <input type="text" name="num3" align="center" placeholder="No of Years" required><br>
+	<input type="button" value="Calculate" onclick="calcSum()"><br>
+    Calculate: <input type="text" name="sum" align="center"placeholder="Total Payable"><br>
+</form>
+ 
+<script>
+    function calcSum() {
+        let num1 = document.getElementsByName("num1")[0].value;
+        let num2 = document.getElementsByName("num2")[0].value;
+        let num3 = document.getElementsByName("num3")[0].value;
+        let sum = Number(num1) + (Number(num1) * Number(num2) * Number(num3))/100;
+        document.getElementsByName("sum")[0].value = sum;
+    }
+</script>
+</body>
+</html>
